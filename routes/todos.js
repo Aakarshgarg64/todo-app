@@ -2,8 +2,9 @@
  const router=express.Router();
 
  const{createTodo}=require("../controllers/createTodo");
- const{getTodo}=require("../controllers/getTodo");
+ const{getTodo,getTodoById}=require("../controllers/getTodo");
 
  router.post("/createTodo",createTodo);
- router.get("/getTodo",getTodo);
+ router.get("/getTodos",getTodo);
+ router.get("/getTodos/:id",getTodoById);
  module.exports=router;
